@@ -1,4 +1,4 @@
-module reg #(parameter N = 32) (clk, rst, in, out, en);
+module regs #(parameter N = 32) (clk, rst, in, out, en);
   input bit clk;
   input bit rst;
   input bit en;
