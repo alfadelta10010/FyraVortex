@@ -14,8 +14,7 @@ memctrl┌───────────────────────�
        └───┘                      └───┘
 */
 
-module mem_controller(dataRI, dataRO, addrIn, addrOut, dataWI, dataWO, mem_ctrl);
-	parameter SIZE = 12;
+module memCtrl#(parameter SIZE = 12) (dataRI, dataRO, addrIn, addrOut, dataWI, dataWO, mem_ctrl);
 	input logic [2:0] mem_ctrl;
 	input logic [31:0] addrIn;
 	input logic [31:0] dataRI;
@@ -24,6 +23,7 @@ module mem_controller(dataRI, dataRO, addrIn, addrOut, dataWI, dataWO, mem_ctrl)
 	output logic [31:0] dataWO;
 	output logic [SIZE-1:0] addrOut;
 	/*
+	Uncomment if unified memory
 	assign addrOut = addrIn[SIZE-1:0] + MemOffset 
 	*/
 	assign addrOut = addrIn[SIZE-1:0]
