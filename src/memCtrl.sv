@@ -26,7 +26,7 @@ module memCtrl#(parameter SIZE = 12) (dataRI, dataRO, addrIn, addrOut, dataWI, d
 	Uncomment if unified memory
 	assign addrOut = addrIn[SIZE-1:0] + MemOffset 
 	*/
-	assign addrOut = addrIn[SIZE-1:0]
+	assign addrOut = addrIn[SIZE-1:0];
 	always_comb
 		case(mem_ctrl)
 			3'b000: dataRO = {{24{dataRI[7]}}, dataRI[7:0]};   // LB
