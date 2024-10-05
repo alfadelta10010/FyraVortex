@@ -11,10 +11,10 @@ A 4-stage pipelined RISC-V core
 - [x] Primitives
 - [x] Decoder
 - [x] Sign Extender
-- [ ] Control Unit
+- [x] Control Unit
 - [x] ALU
 - [x] Register File
 - [x] Pipeline Registers
 - [x] Forwarding Unit
 - [ ] Hazard Detection Unit
-- [ ] Instruction & Data Memory - Byte Addressable
+- [x] Instruction & Data Memory - Byte Addressable
