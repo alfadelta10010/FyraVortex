@@ -16,10 +16,10 @@ module tb_adder();
     #1 a_tb = 32'h00000004;
     b_tb = 32'h00000004;
     cin_tb = 0;
-    #2 a_tb = 32'h00000004;
+    #1 a_tb = 32'h00000004;
     b_tb = 32'h0000F004;
     cin_tb = 1;
-    #3 a_tb = 32'hFFFFFFFE;
+    #1 a_tb = 32'hFFFFFFFE;
     b_tb = 32'h00000001;
     cin_tb = 1;
   end
