@@ -132,6 +132,7 @@ module controller (f3, f7, opcode, reg_wr, mem_rd, mem_wr, wb_ctrl, alu_op, alu_
 				alu_op = 4'b0000;
 				mem_ctrl = 3'bXXX;
 				do_branch = 1'b0;
+				jump_ctrl = 1'b0;
 			end
 			7'b0010111: begin // AUIPC
 				reg_wr = 1'b1;
