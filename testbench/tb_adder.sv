@@ -24,4 +24,3 @@ module tb_adder();
     cin_tb = 1;
   end
 endmodule
-    
