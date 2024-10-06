@@ -1,27 +1,33 @@
-module ID(clk, pc_p, inst_out,wr_en, wr_addr, wr_data, rs1_val, rs2_val, imm, rs1, rs2, rd, opcode, reg_wr, mem_rd, mem_wr, wb_ctrl, alu_op, alu_s1, alu_s2, branch_ctrl, mem_ctrl, do_branch, jump_ctrl);
-	input  logic clk;
-	input  logic [31:0] pc_p, inst_out;
-	input  logic wr_en;
-   	input  logic [4:0]  wr_addr;
-  	input  logic [31:0] wr_data;
-	output logic [31:0] rs1_val, rs2_val, imm;
-	output logic [4:0]  rs1, rs2, rd;
-	output logic [5:0]  opcode;
-	output logic reg_wr;
-	output logic mem_rd, mem_wr;
-	output logic [1:0] wb_ctrl;
-	output logic [2:0] branch_ctrl;
-	output logic [2:0] mem_ctrl;
-	output logic alu_s1, alu_s2;
-	output logic [3:0] alu_op;
-	output logic jump_ctrl;	
-	output logic do_branch;
-	logic [2:0] fn3;
-   	logic [6:0] fn7;
-	
-	decoder       decode (.instIn(inst_out), .opcode(opcode), .rd(rd), .rs1(rs1), .rs2(rs2), .fn3(fn3), .fn7(fn7));
-	controller    control_unit (.f3(fn3), .f7(fn7), .opcode(opcode), .reg_wr(reg_wr), .mem_rd(mem_rd), .mem_wr(mem_wr), .wb_ctrl(wb_ctrl), .alu_op(alu_op), .alu_s1(alu_s1), .alu_s2(alu_s2), .branch_ctrl(branch_ctrl), .mem_ctrl(mem_ctrl), .do_branch(do_branch), .jump_ctrl(jump_ctrl));
-	RegFile #(32) register (.clk(clk), .wr_en(wr_en), .rd_addr1(rs1), .rd_addr2(rs2), .wr_addr(wr_addr), .wr_data(wr_data), .rd_data1(rs1_val), .rd_data2(rs2_val));
-	signExt       Immediate_Extender (.opcode(opcode), .instIn(pc_p), .immOut(imm));
-	
+module ID(clk, pcP, instIn, regWRIn, rdIn, DIn, r1, r2, imm, rs1Out, rs2Out, rdOut, opcode, regWR, memRD, memWR, wbCtrl, aluOp, aluS1, aluS2, branchCtrl, memCtrl, doBranch, doJump);
+  
+  input logic [31:0] pcP, pcN, instIn;
+  input logic clk;
+  input logic regWRIn;
+  input logic [4:0] rdIn;
+  input logic [31:0] DIn;
+  output logic [31:0] r1, r2, imm;
+  output logic [4:0] rs1Out, rs2Out, rdOut;
+  output logic [6:0] opcode;
+  output logic regWR, memRD, memWR, aluS1, aluS2, doJump, doBranch;
+  output logic [1:0] wbCtrl;
+  output logic [2:0] branchCtrl;
+  output logic [2:0] memCtrl;
+  output logic [3:0] aluOp;
+  logic [2:0] fn3;
+  logic [6:0] fn7;
+  
+  decoder decoderUnit (.instIn(instIn), .opcode(opcode), .rd(rdOut), 
+                       .rs1(rs1Out), .rs2(rs2Out), .fn3(fn3), .fn7(fn7)
+                      );
+  controller controlUnit (.f3(f3), .f7(f7), .opcode(opcode), .regWR(regWR), 
+                          .memRD(memRD), .memWR(memWR), .wbCtrl(wbCtrl), .aluOp(aluOp), 
+                          .aluS1(aluS1), .aluS2(aluS2), .branchCtrl(branchCtrl), 
+                          .memCtrl(memCtrl), .doJump(doJump), .doBranch(doBranch)
+                         );
+  regFile registerFile #(32) (.clk(clk), .wr_en(regWRIn), .rs1(rs1Out), .rs2(rs2Out), 
+                              .rd(rdIn), .r1(r1), .r2(r2), .dIn(DIn)
+                             );
+  signExt signExtender (.opcode(opcode), .instIn(instIn), .immOut(imm)
+                       );
+    
 endmodule
