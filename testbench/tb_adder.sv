@@ -15,6 +15,6 @@ module tb_adder();
     #1 a_tb = 32'h00000004;
     b_tb = 32'h0000F004;
     #1 a_tb = 32'hFFFFFFFE;
-    b_tb = 32'h00000001;
+    b_tb = 32'h00000002;
   end
 endmodule
