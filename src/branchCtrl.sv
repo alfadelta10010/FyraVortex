@@ -18,6 +18,9 @@ module branchCtrl(b_control, r1, r2, branch_sel);
           else
             branch_sel = 1'b0;
         end
+        3'b011: begin // Jump
+          branch_sel = 1'b1;
+        end
         3'b100: begin // BLT
           if ($signed(r1) < $signed(r2))
             branch_sel = 1'b1;
@@ -42,7 +45,6 @@ module branchCtrl(b_control, r1, r2, branch_sel);
           else
             branch_sel = 1'b0;
         end
-        //3'b011: N/A
         default: begin 
           branch_sel = 1'b0;
         end
