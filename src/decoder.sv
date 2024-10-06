@@ -21,19 +21,17 @@ instIn  │  C  ├──────────►
         F3  F7            
 */
 
-module decoder(instIn, opcode, rd, rs1, rs2, instOut, fn3, fn7);
+module decoder(instIn, opcode, rd, rs1, rs2, fn3, fn7);
   input logic [31:0] instIn;
   output logic [4:0] rd;
   output logic [4:0] rs1;
   output logic [4:0] rs2;
-  output logic [31:0] instOut;
   output logic [6:0] opcode;
   output logic [2:0] fn3;
   output logic [6:0] fn7;
   always_comb
     begin
       opcode = instIn[6:0];
-      instOut = instIn;
       case(opcode)
         7'b0110111: //LUI
           begin
