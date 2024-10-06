@@ -14,7 +14,7 @@ memctrl┌───────────────────────�
        └───┘                      └───┘
 */
 
-module memCtrl#(parameter SIZE = 12) (memCtrl, addrIn, dataRI, dataWI, dataRO, dataWO, addrOut);
+module memCtrlr#(parameter SIZE = 12) (memCtrl, addrIn, dataRI, dataWI, dataRO, dataWO, addrOut);
   input logic [2:0] mem_ctrl;
   input logic [31:0] addrIn;
   input logic [31:0] dataRI;
