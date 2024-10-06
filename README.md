@@ -8,13 +8,21 @@ A 4-stage pipelined RISC-V core
 - Vortex = Speedy and Dynamic 
 
 ## To-do
-- [x] Primitives
+- [x] Primitives - Register, AND, OR, MUXs
 - [x] Decoder
 - [x] Sign Extender
 - [x] Control Unit
 - [x] ALU
 - [x] Register File
-- [x] Pipeline Registers
+- [x] Memory Controller 
+- [ ] Data Memory
+- [ ] Instruction Memory
 - [x] Forwarding Unit
 - [ ] Hazard Detection Unit
-- [x] Instruction & Data Memory - Byte Addressable
+
+### Stages
+- [x] Instruction Fetch
+- [x] Instruction Decode
+- [ ] Instruction Execute
+- [x] Data Write Back
+
