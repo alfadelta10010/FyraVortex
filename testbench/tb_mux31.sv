@@ -1,17 +1,9 @@
-module tb_mux31(a_tb, b_tb, c_tb, s_tb, y_tb);
-  parameter N = 32;
-  output logic [N-1:0] a_tb;
-  output logic [N-1:0] b_tb;
-  output logic [N-1:0] c_tb;
-  output logic [1:0] s_tb;
-  input logic [N-1:0] y_tb;
+module tb_mux31();
+  logic [31:0] a_tb; b_tb, c_tb;
+  logic [1:0] s_tb;
+  logic [31:0] y_tb;
   
-  mux31 dut (.a(a_tb), 
-         .b(b_tb), 
-         .c(c_tb), 
-         .s(s_tb), 
-         .y(y_tb)
-        );
+  mux31 dut (.a(a_tb), .b(b_tb), .c(c_tb), .s(s_tb), .y(y_tb));
   
   initial begin
     $dumpfile("dump.vcd");
