@@ -15,7 +15,7 @@ memctrl┌───────────────────────�
 */
 
 module memCtrlr#(parameter SIZE = 12) (memCtrl, addrIn, dataRI, dataWI, dataRO, dataWO, addrOut);
-  input logic [2:0] mem_ctrl;
+  input logic [2:0] memCtrl;
   input logic [31:0] addrIn;
   input logic [31:0] dataRI;
   input logic [31:0] dataWI;
@@ -36,7 +36,7 @@ module memCtrlr#(parameter SIZE = 12) (memCtrl, addrIn, dataRI, dataWI, dataRO, 
       dataRO = 32'b0; // default value for dataRO
       dataWO = 32'b0; // default value for dataWO
 
-      case(mem_ctrl)
+      case(memCtrl)
         3'b000: dataRO = {{24{dataRI[7]}}, dataRI[7:0]};   // LB
         3'b001: dataRO = {{16{dataRI[15]}}, dataRI[15:0]}; // LH
         3'b010: dataRO = dataRI;                           // LW

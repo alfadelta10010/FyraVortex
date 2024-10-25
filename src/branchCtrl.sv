@@ -4,8 +4,8 @@ module branchCtrl(bCtrl, r1, r2, bSel);
   input logic [31:0] r2;
   output logic [0:0] bSel;
   always_comb
-    bSel = 1'b0;
     begin
+      bSel = 1'b0;
       case(bCtrl)
         3'b011: begin // BEQ
           if (r1 == r2)
