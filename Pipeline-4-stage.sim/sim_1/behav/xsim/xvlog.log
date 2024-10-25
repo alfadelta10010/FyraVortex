@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alphadelta1803/projects/RV32I-4Stage/src/controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alphadelta1803/projects/RV32I-4Stage/src/decoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alphadelta1803/projects/RV32I-4Stage/src/regFile.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alphadelta1803/projects/RV32I-4Stage/src/signExt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signExt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/alphadelta1803/projects/RV32I-4Stage/src/ID.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID
+INFO: [VRFC 10-2458] undeclared symbol f3, assumed default net type wire [/home/alphadelta1803/projects/RV32I-4Stage/src/ID.sv:21]
+INFO: [VRFC 10-2458] undeclared symbol f7, assumed default net type wire [/home/alphadelta1803/projects/RV32I-4Stage/src/ID.sv:21]

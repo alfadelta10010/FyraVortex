@@ -1,0 +1,378 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Oct 25 13:48:12 2024
+# Process ID: 4368
+# Current directory: /home/alphadelta1803/projects/RV32I-4Stage/Pipeline-4-stage.runs/synth_1
+# Command line: vivado -log DWB.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DWB.tcl
+# Log file: /home/alphadelta1803/projects/RV32I-4Stage/Pipeline-4-stage.runs/synth_1/DWB.vds
+# Journal file: /home/alphadelta1803/projects/RV32I-4Stage/Pipeline-4-stage.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source DWB.tcl -notrace
+Command: synth_design -top DWB -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4390 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1474.984 ; gain = 100.711 ; free physical = 10659 ; free virtual = 33055
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'DWB' [/home/alphadelta1803/projects/RV32I-4Stage/src/DWB.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'memCtrlr' [/home/alphadelta1803/projects/RV32I-4Stage/src/memCtrlr.sv:17]
+	Parameter SIZE bound to: 12 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/alphadelta1803/projects/RV32I-4Stage/src/memCtrlr.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'memCtrlr' (1#1) [/home/alphadelta1803/projects/RV32I-4Stage/src/memCtrlr.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'dataMem' [/home/alphadelta1803/projects/RV32I-4Stage/src/dataMem.sv:1]
+	Parameter SIZE bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dataMem' (2#1) [/home/alphadelta1803/projects/RV32I-4Stage/src/dataMem.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'mux31' [/home/alphadelta1803/projects/RV32I-4Stage/src/mux31.sv:1]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux31' (3#1) [/home/alphadelta1803/projects/RV32I-4Stage/src/mux31.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'DWB' (4#1) [/home/alphadelta1803/projects/RV32I-4Stage/src/DWB.sv:1]
+WARNING: [Synth 8-3331] design dataMem has unconnected port addr[11]
+WARNING: [Synth 8-3331] design dataMem has unconnected port addr[10]
+WARNING: [Synth 8-3331] design dataMem has unconnected port addr[9]
+WARNING: [Synth 8-3331] design dataMem has unconnected port addr[8]
+WARNING: [Synth 8-3331] design dataMem has unconnected port addr[7]
+WARNING: [Synth 8-3331] design dataMem has unconnected port addr[6]
+WARNING: [Synth 8-3331] design dataMem has unconnected port addr[5]
+WARNING: [Synth 8-3331] design dataMem has unconnected port addr[4]
+WARNING: [Synth 8-3331] design dataMem has unconnected port addr[3]
+WARNING: [Synth 8-3331] design dataMem has unconnected port addr[2]
+WARNING: [Synth 8-3331] design dataMem has unconnected port addr[1]
+WARNING: [Synth 8-3331] design dataMem has unconnected port addr[0]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[31]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[30]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[29]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[28]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[27]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[26]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[25]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[24]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[23]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[22]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[21]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[20]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[19]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[18]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[17]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[16]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[15]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[14]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[13]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[12]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[11]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[10]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[9]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[8]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[7]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[6]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[5]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[4]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[3]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[2]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[1]
+WARNING: [Synth 8-3331] design dataMem has unconnected port dataW[0]
+WARNING: [Synth 8-3331] design dataMem has unconnected port memR
+WARNING: [Synth 8-3331] design dataMem has unconnected port memW
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[31]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[30]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[29]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[28]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[27]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[26]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[25]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[24]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[23]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[22]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[21]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[20]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[19]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[18]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[17]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[16]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[15]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[14]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[13]
+WARNING: [Synth 8-3331] design memCtrlr has unconnected port addrIn[12]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1529.734 ; gain = 155.461 ; free physical = 10603 ; free virtual = 33001
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1541.609 ; gain = 167.336 ; free physical = 10638 ; free virtual = 33035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1549.613 ; gain = 175.340 ; free physical = 10631 ; free virtual = 33028
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1558.520 ; gain = 184.246 ; free physical = 10625 ; free virtual = 33025
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module memCtrlr 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 1     
+Module dataMem 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mux31 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design DWB has unconnected port memRD
+WARNING: [Synth 8-3331] design DWB has unconnected port memWR
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[31]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[30]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[29]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[28]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[27]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[26]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[25]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[24]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[23]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[22]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[21]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[20]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[19]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[18]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[17]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[16]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[15]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[14]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[13]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[12]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[11]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[10]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[9]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[8]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[7]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[6]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[5]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[4]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[3]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[2]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[1]
+WARNING: [Synth 8-3331] design DWB has unconnected port dataIn[0]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[0]' (FD) to 'dataMemory/dataR_reg[1]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[1]' (FD) to 'dataMemory/dataR_reg[2]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[2]' (FD) to 'dataMemory/dataR_reg[3]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[3]' (FD) to 'dataMemory/dataR_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[4]' (FD) to 'dataMemory/dataR_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[5]' (FD) to 'dataMemory/dataR_reg[6]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[6]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[8]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[9]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[10]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[11]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[12]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[13]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[14]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[16]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[17]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[18]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[19]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[20]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[21]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[22]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[23]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[24]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[25]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[26]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[27]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[28]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[29]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[30]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[15]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dataMemory/dataR_reg[31]' (FD) to 'dataMemory/dataR_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dataMemory/dataR_reg[7] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1654.895 ; gain = 280.621 ; free physical = 10529 ; free virtual = 32948
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1654.895 ; gain = 280.621 ; free physical = 10529 ; free virtual = 32948
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1654.895 ; gain = 280.621 ; free physical = 10529 ; free virtual = 32948
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1654.895 ; gain = 280.621 ; free physical = 10532 ; free virtual = 32952
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1654.895 ; gain = 280.621 ; free physical = 10532 ; free virtual = 32952
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1654.895 ; gain = 280.621 ; free physical = 10532 ; free virtual = 32952
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1654.895 ; gain = 280.621 ; free physical = 10532 ; free virtual = 32952
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1654.895 ; gain = 280.621 ; free physical = 10532 ; free virtual = 32952
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1654.895 ; gain = 280.621 ; free physical = 10532 ; free virtual = 32952
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT4 |    32|
+|2     |IBUF |    66|
+|3     |OBUF |    32|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   130|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1654.895 ; gain = 280.621 ; free physical = 10532 ; free virtual = 32952
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 100 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1654.895 ; gain = 280.621 ; free physical = 10532 ; free virtual = 32952
+Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1654.902 ; gain = 280.621 ; free physical = 10532 ; free virtual = 32952
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1753.332 ; gain = 0.000 ; free physical = 10446 ; free virtual = 32880
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+49 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1753.332 ; gain = 379.059 ; free physical = 10445 ; free virtual = 32879
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1753.332 ; gain = 0.000 ; free physical = 10445 ; free virtual = 32879
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/alphadelta1803/projects/RV32I-4Stage/Pipeline-4-stage.runs/synth_1/DWB.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file DWB_utilization_synth.rpt -pb DWB_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 25 13:48:26 2024...

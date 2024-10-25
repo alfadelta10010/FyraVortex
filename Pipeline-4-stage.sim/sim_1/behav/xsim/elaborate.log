@@ -1,0 +1,18 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto df114bbfbc594a5aa48963b90390f143 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ID_behav xil_defaultlib.ID xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'f3' [/home/alphadelta1803/projects/RV32I-4Stage/src/ID.sv:21]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/alphadelta1803/projects/RV32I-4Stage/Pipeline-4-stage.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.decoder
+Compiling module xil_defaultlib.controller
+Compiling module xil_defaultlib.regFile
+Compiling module xil_defaultlib.signExt
+Compiling module xil_defaultlib.ID
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ID_behav
