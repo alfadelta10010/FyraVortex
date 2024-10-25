@@ -1,5 +1,5 @@
 module regFile #(parameter DATA_WIDTH = 32) (clk, wrEn, rs1, rs2, rd, r1, r2, dIn);
-  input logic clk, wr_en;
+  input logic clk, wrEn;
   input logic [4:0] rs1, rs2, rd;
   input logic [DATA_WIDTH-1:0] dIn;
   output logic [DATA_WIDTH-1:0] r1, r2;

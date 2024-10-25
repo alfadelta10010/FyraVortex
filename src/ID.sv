@@ -1,5 +1,4 @@
-module ID(clk, pcP, instIn, regWRIn, rdIn, DIn, r1, r2, imm, rs1Out, rs2Out, rdOut, opcode, regWR, memRD, memWR, wbCtrl, aluOp, aluS1, aluS2, branchCtrl, memCtrl, doBranch, doJump);
-  
+module ID(clk, pcP, pcN, instIn, regWRIn, rdIn, DIn, r1, r2, imm, rs1Out, rs2Out, rdOut, opcode, regWR, memRD, memWR, wbCtrl, aluOp, aluS1, aluS2, branchCtrl, memCtrl, doBranch, doJump);
   input logic [31:0] pcP, pcN, instIn;
   input logic clk;
   input logic regWRIn;
@@ -24,10 +23,7 @@ module ID(clk, pcP, instIn, regWRIn, rdIn, DIn, r1, r2, imm, rs1Out, rs2Out, rdO
                           .aluS1(aluS1), .aluS2(aluS2), .branchCtrl(branchCtrl), 
                           .memCtrl(memCtrl), .doJump(doJump), .doBranch(doBranch)
                          );
-  regFile registerFile #(32) (.clk(clk), .wr_en(regWRIn), .rs1(rs1Out), .rs2(rs2Out), 
-                              .rd(rdIn), .r1(r1), .r2(r2), .dIn(DIn)
-                             );
-  signExt signExtender (.opcode(opcode), .instIn(instIn), .immOut(imm)
-                       );
+  regFile #(32) registerFile (.clk(clk), .wrEn(regWRIn), .rs1(rs1Out), .rs2(rs2Out), .rd(rdIn), .r1(r1), .r2(r2), .dIn(DIn));
+  signExt signExtender (.opcode(opcode), .instIn(instIn), .immOut(imm));
     
 endmodule

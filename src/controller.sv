@@ -125,4 +125,5 @@ module controller (f3, f7, opcode, regWR, memRD, memWR, wbCtrl, aluOp, aluS1, al
           memCtrl = 3'bXXX;
         end
     endcase
+  end
 endmodule
