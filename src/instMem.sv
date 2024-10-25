@@ -1,14 +1,17 @@
-// instr_mem - instruction memory for single-cycle RISC-V CPU
-module instMem #(parameter DATA_WIDTH = 32, ADDR_WIDTH = 32, MEM_SIZE = 512) (inst_addr, inst);
-  input [ADDR_WIDTH-1:0] inst_addr;
-  output [DATA_WIDTH-1:0] inst;
-  // array of 64 32-bit words or instructions
-  logic [DATA_WIDTH-1:0] inst_ram [0:MEM_SIZE-1];
+module instMem #(parameter XLEN = 8) (instAddr, instOut);
+  input logic [31:0] instAddr;
+  logic [XLEN - 1 : 0] addr;
+  output logic [31:0] instOut;  
+  reg [7:0] mem [0: (2**XLEN)-1];
+  
   initial begin
-    $readmemh("program_dump.hex", inst_ram);
+    $readmemh("program.data", mem, 0, (2**XLEN) -1);
   end
   
-  // word-aligned memory access
-  // combinational read logic
-  assign inst = inst_ram[inst_addr[9:2]];
+  always @(*)
+    begin
+      addr = instAddr[XLEN-1:0]; 
+      instOut = {mem [addr+3], mem [addr+2], mem [addr+1], mem [addr]};
+    end
 endmodule
+
