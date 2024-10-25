@@ -1,13 +1,22 @@
-module dataMem #(parameter SIZE = 12)(addr, dataW, dataR, memR, memW, clk);
+module dataMem #(parameter SIZE = 12)(addr, dataW, dataR, memR, clk, wrType);
   output logic [31:0] dataR;
   input bit clk;
   input logic [31:0] dataW;
-  input logic [SIZE-1:0] addr;
+  input logic [SIZE-1 :0] addr;
   input logic memR;
-  input logic memW;
-  logic [7:0] datafile [0 : 2**SIZE - 1];
-  always @(memR) 
+  input logic [3:0] wrType;
+  logic [7:0] datafile [0 : (2**SIZE) - 1];
+  
+  initial begin
+    int i;
+    for(i = 0; i < (2**SIZE); i++)
     begin
+      datafile[i] = 8'b0;
+    end
+  end
+  
+  always @(posedge clk) 
+    begin 
       if(memR == 1) 
         begin
           dataR[7:0] <= datafile[addr];
@@ -18,18 +27,15 @@ module dataMem #(parameter SIZE = 12)(addr, dataW, dataR, memR, memW, clk);
       else
         dataR <= 32'bX;
     end
-  always @(posedge clk) 
-    begin 
-      if(memW == 1) 
-        begin
-          if(dataW[31:24] != 8'bX)
-            datafile[addr+3] <= dataW[31:24];
-          if(dataW[23:16] != 8'bX)
-            datafile[addr+2] <= dataW[23:16];
-          if (dataW[15:8] != 8'bX)
-            datafile[addr+1] <= dataW[15:8];
-          if (dataW[7:0] != 8'bX)
-            datafile[addr] <= dataW[7:0];
-        end
+  always_comb
+    begin
+      if(wrType[3] == 1'b1)
+        datafile[addr+3] = dataW[31:24];
+      if(wrType[2] == 1'b1)
+        datafile[addr+2] = dataW[23:16];
+      if(wrType[1] == 1'b1)
+        datafile[addr+1] = dataW[15:8];
+      if(wrType[0] == 1'b1)
+        datafile[addr] = dataW[7:0];
     end
 endmodule

@@ -1,9 +1,9 @@
-module controller (f3, f7, opcode, regWR, memRD, memWR, wbCtrl, aluOp, aluS1, aluS2, branchCtrl, memCtrl, doJump, doBranch);
+module controller (f3, f7, opcode, regWR, memRD, wbCtrl, aluOp, aluS1, aluS2, branchCtrl, memCtrl, doJump, doBranch);
   input logic [2:0] f3;
   input logic [6:0] f7;
   input logic [6:0] opcode;
   output logic regWR;
-  output logic memRD, memWR;
+  output logic memRD;
   output logic [1:0] wbCtrl;
   output logic [2:0] branchCtrl;
   output logic [2:0] memCtrl;
@@ -12,7 +12,7 @@ module controller (f3, f7, opcode, regWR, memRD, memWR, wbCtrl, aluOp, aluS1, al
   
   always_comb
     begin
-      {regWR, memRD, memWR, aluS1, aluS2, branchCtrl, doJump, doBranch} = 'b0;
+      {regWR, memRD, aluS1, aluS2, branchCtrl, doJump, doBranch} = 'b0;
       memCtrl = 3'bXXX;
       aluOp = 4'b1001;
       wbCtrl = 2'b11;
@@ -69,7 +69,6 @@ module controller (f3, f7, opcode, regWR, memRD, memWR, wbCtrl, aluOp, aluS1, al
         end
         
         7'b0100011: begin // S-type
-          memWR = 1'b1;
           aluS1 = 1'b1;
           case(f3)
             3'b000: memCtrl = 3'b101; // SB
@@ -80,7 +79,6 @@ module controller (f3, f7, opcode, regWR, memRD, memWR, wbCtrl, aluOp, aluS1, al
         end
         
         7'b1100011: begin // B-type
-          memWR = 1'b1;
           branchCtrl = f3;
           doBranch = 1'b1;
         end
@@ -116,7 +114,6 @@ module controller (f3, f7, opcode, regWR, memRD, memWR, wbCtrl, aluOp, aluS1, al
         default: begin
           regWR = 1'b0;
           memRD = 1'b0;
-          memWR = 1'b0;
           wbCtrl = 2'b11;
           aluS1 = 1'b0;
           aluS2 = 1'b0;
