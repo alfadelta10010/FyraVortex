@@ -3,18 +3,17 @@ module tb_controller();
   logic [6:0] f7_tb;
   logic [6:0] opcode_tb;
   logic regWR_tb;
-  logic memRD_tb, memWR_tb;
+  logic memWR_tb;
   logic [1:0] wbCtrl_tb;
   logic [2:0] branchCtrl_tb;
   logic [2:0] memCtrl_tb;
   logic aluS1_tb, aluS2_tb, doBranch_tb, doJump_tb;
   logic [3:0] aluOp_tb;
   
-  controller dut (.f3(f3_tb), 
+  decoderTemp dut (.f3(f3_tb), 
                   .f7(f7_tb), 
                   .opcode(opcode_tb), 
                   .regWR(regWR_tb), 
-                  .memRD(memRD_tb), 
                   .memWR(memWR_tb), 
                   .wbCtrl(wbCtrl_tb), 
                   .aluOp(aluOp_tb), 
@@ -118,5 +117,6 @@ module tb_controller();
     #1 f3_tb = 3'b110;
     #1 f3_tb = 3'b111;
     #1 opcode_tb = 7'b0011111; // default case
+    #1 $finish;
   end
 endmodule
