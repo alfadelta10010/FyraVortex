@@ -1,0 +1,32 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../src/DWB.sv" \
+"../../../../src/ID.sv" \
+"../../../../src/IE.sv" \
+"../../../../src/IF.sv" \
+"../../../../src/adder.sv" \
+"../../../../src/alu.sv" \
+"../../../../src/and2.sv" \
+"../../../../src/branchCtrl.sv" \
+"../../../../src/controller.sv" \
+"../../../../src/dataMem.sv" \
+"../../../../src/decoder.sv" \
+"../../../../src/forward.sv" \
+"../../../../src/instMem.sv" \
+"../../../../src/memCtrlr.sv" \
+"../../../../src/mux21.sv" \
+"../../../../src/mux31.sv" \
+"../../../../src/or2.sv" \
+"../../../../src/regFile.sv" \
+"../../../../src/regs.sv" \
+"../../../../src/signExt.sv" \
+"../../../../Pipeline-4-stage.srcs/sources_1/new/FyraVortex.sv" \
+"../../../../src/decoderTemp.sv" \
+"../../../../testbench/tb_mem_controller.sv" \
+"../../../../testbench/tb_controller.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
