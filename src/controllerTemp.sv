@@ -1,4 +1,4 @@
-module decoderTemp (
+module controllerTemp (
   input logic [2:0] f3,
   input logic [6:0] f7,
   input logic [6:0] opcode,

@@ -10,7 +10,7 @@ module tb_controller();
   logic aluS1_tb, aluS2_tb, doBranch_tb, doJump_tb;
   logic [3:0] aluOp_tb;
   
-  decoderTemp dut (.f3(f3_tb), 
+  controllerTemp dut (.f3(f3_tb), 
                   .f7(f7_tb), 
                   .opcode(opcode_tb), 
                   .regWR(regWR_tb), 
