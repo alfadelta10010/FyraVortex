@@ -1,4 +1,4 @@
-module ID(clk, pcP, pcN, instIn, regWRIn, rdIn, DIn, r1, r2, imm, rs1Out, rs2Out, rdOut, opcode, regWR, memRD, wbCtrl, aluOp, aluS1, aluS2, branchCtrl, memCtrl, doBranch, doJump);
+module ID(clk, pcP, pcN, instIn, regWRIn, rdIn, DIn, r1, r2, imm, rs1Out, rs2Out, rdOut, opcode, regWR, memW, wbCtrl, aluOp, aluS1, aluS2, branchCtrl, memCtrl, doBranch, doJump);
   input logic [31:0] pcP, pcN, instIn;
   input logic clk;
   input logic regWRIn;
@@ -7,7 +7,7 @@ module ID(clk, pcP, pcN, instIn, regWRIn, rdIn, DIn, r1, r2, imm, rs1Out, rs2Out
   output logic [31:0] r1, r2, imm;
   output logic [4:0] rs1Out, rs2Out, rdOut;
   output logic [6:0] opcode;
-  output logic regWR, memRD, aluS1, aluS2, doJump, doBranch;
+  output logic regWR, aluS1, aluS2, doJump, doBranch, memW;
   output logic [1:0] wbCtrl;
   output logic [2:0] branchCtrl;
   output logic [2:0] memCtrl;
@@ -19,7 +19,7 @@ module ID(clk, pcP, pcN, instIn, regWRIn, rdIn, DIn, r1, r2, imm, rs1Out, rs2Out
                        .rs1(rs1Out), .rs2(rs2Out), .fn3(fn3), .fn7(fn7)
                       );
   controller controlUnit (.f3(f3), .f7(f7), .opcode(opcode), .regWR(regWR), 
-                          .memRD(memRD), .wbCtrl(wbCtrl), .aluOp(aluOp), 
+                          .wbCtrl(wbCtrl), .aluOp(aluOp), .memWR(memW),
                           .aluS1(aluS1), .aluS2(aluS2), .branchCtrl(branchCtrl), 
                           .memCtrl(memCtrl), .doJump(doJump), .doBranch(doBranch)
                          );
