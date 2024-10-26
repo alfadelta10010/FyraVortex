@@ -1,5 +1,5 @@
 module tb_mux31();
-  logic [31:0] a_tb; b_tb, c_tb;
+  logic [31:0] a_tb, b_tb, c_tb;
   logic [1:0] s_tb;
   logic [31:0] y_tb;
   
