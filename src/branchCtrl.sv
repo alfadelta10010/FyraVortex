@@ -7,7 +7,7 @@ module branchCtrl(bCtrl, r1, r2, bSel);
     begin
       bSel = 1'b0;
       case(bCtrl)
-        3'b011: begin // BEQ
+        3'b000: begin // BEQ
           if (r1 == r2)
             bSel = 1'b1;
           else
