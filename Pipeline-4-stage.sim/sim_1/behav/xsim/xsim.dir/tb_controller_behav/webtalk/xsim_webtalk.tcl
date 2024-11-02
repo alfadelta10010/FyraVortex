@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir /home/alphadelta1803/projects/RV32I-4Stage/Pipeline-4-stage.sim/sim_1/behav/xsim/xsim.dir/tb_controller_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Sat Oct 26 20:06:27 2024" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Tue Oct 29 11:53:12 2024" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2019.1 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2552052" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "LIN64" -context "software_version_and_target_device"
@@ -14,11 +14,11 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "7403bb72-150e-4f64-b730-3bab87cfea88" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "df114bbfbc594a5aa48963b90390f143" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "7" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "10" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Pop" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "Pop!_OS 22.04 LTS" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz" -context "user_environment"
-webtalk_add_data -client project -key cpu_speed -value "4299.746 MHz" -context "user_environment"
+webtalk_add_data -client project -key cpu_speed -value "4299.931 MHz" -context "user_environment"
 webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
 webtalk_add_data -client project -key system_ram -value "16.000 GB" -context "user_environment"
 webtalk_register_client -client xsim
@@ -37,7 +37,7 @@ webtalk_add_data -client xsim -key Total_Nets -value "0" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Processes -value "25" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Instances -value "3" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Xilinx_HDL_Libraries_Used -value "secureip unimacro_ver unisims_ver " -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Time -value "0.83_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Memory -value "213144_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 582298831 -regid "" -xml /home/alphadelta1803/projects/RV32I-4Stage/Pipeline-4-stage.sim/sim_1/behav/xsim/xsim.dir/tb_controller_behav/webtalk/usage_statistics_ext_xsim.xml -html /home/alphadelta1803/projects/RV32I-4Stage/Pipeline-4-stage.sim/sim_1/behav/xsim/xsim.dir/tb_controller_behav/webtalk/usage_statistics_ext_xsim.html -wdm /home/alphadelta1803/projects/RV32I-4Stage/Pipeline-4-stage.sim/sim_1/behav/xsim/xsim.dir/tb_controller_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Compiler_Time -value "0.82_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Compiler_Memory -value "212908_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 3715943436 -regid "" -xml /home/alphadelta1803/projects/RV32I-4Stage/Pipeline-4-stage.sim/sim_1/behav/xsim/xsim.dir/tb_controller_behav/webtalk/usage_statistics_ext_xsim.xml -html /home/alphadelta1803/projects/RV32I-4Stage/Pipeline-4-stage.sim/sim_1/behav/xsim/xsim.dir/tb_controller_behav/webtalk/usage_statistics_ext_xsim.html -wdm /home/alphadelta1803/projects/RV32I-4Stage/Pipeline-4-stage.sim/sim_1/behav/xsim/xsim.dir/tb_controller_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

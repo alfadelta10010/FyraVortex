@@ -5,10 +5,9 @@ Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4100] "/home/alphadelta1803/projects/RV32I-4Stage/Pipeline-4-stage.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.decoderTemp
+Compiling module xil_defaultlib.controllerTemp
 Compiling module xil_defaultlib.tb_controller
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_controller_behav

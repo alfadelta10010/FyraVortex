@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1729955244">
-  <File Type="RDS-RDS" Name="DWB.vds"/>
   <File Type="RDS-DCP" Name="DWB.dcp"/>
   <File Type="PA-TCL" Name="DWB.tcl"/>
+  <File Type="RDS-RDS" Name="DWB.vds"/>
   <File Type="REPORTS-TCL" Name="DWB_reports.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>

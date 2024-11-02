@@ -20,8 +20,8 @@ sv xil_defaultlib  \
 "../../../../src/regFile.sv" \
 "../../../../src/regs.sv" \
 "../../../../src/signExt.sv" \
-"../../../../Pipeline-4-stage.srcs/sources_1/new/FyraVortex.sv" \
-"../../../../src/decoderTemp.sv" \
+"../../../../src/FyraVortex.sv" \
+"../../../../src/controllerTemp.sv" \
 "../../../../testbench/tb_mem_controller.sv" \
 "../../../../testbench/tb_controller.sv" \
 
