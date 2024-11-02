@@ -1,4 +1,4 @@
-module controller (f3, f7, opcode, regWR, memWR, wbCtrl, aluOp, aluS1, aluS2, branchCtrl, memCtrl, doJump, doBranch);
+module controllerOld (f3, f7, opcode, regWR, memWR, wbCtrl, aluOp, aluS1, aluS2, branchCtrl, memCtrl, doJump, doBranch);
   input logic [2:0] f3;
   input logic [6:0] f7;
   input logic [6:0] opcode;
@@ -95,7 +95,7 @@ module controller (f3, f7, opcode, regWR, memWR, wbCtrl, aluOp, aluS1, aluS2, br
           aluOp = 4'b0000;
           doJump = 1'b1;
         end
-        7'b0010111: begin // JALR
+        7'b1100111: begin // JALR
           regWR = 1'b1;
           wbCtrl = 2'b10;
           aluOp = 4'b0000;
