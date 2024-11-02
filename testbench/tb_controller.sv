@@ -10,7 +10,7 @@ module tb_controller();
   logic aluS1_tb, aluS2_tb, doBranch_tb, doJump_tb;
   logic [3:0] aluOp_tb;
   
-  controllerTemp dut (.f3(f3_tb), 
+  controllerOld dut (.f3(f3_tb), 
                   .f7(f7_tb), 
                   .opcode(opcode_tb), 
                   .regWR(regWR_tb), 
@@ -46,12 +46,16 @@ module tb_controller();
     #1 f3_tb = 3'b111;
     #1 opcode_tb = 7'b0010011; // IR-Type
     f3_tb = 3'b000;
+    #1 f7_tb = 7'b0100000;
     #1 f3_tb = 3'b001;
+    #1 f7_tb = 7'b0;
     #1 f3_tb = 3'b010;
     #1 f3_tb = 3'b011;
     #1 f3_tb = 3'b100;
     #1 f3_tb = 3'b101;
+    #1 f7_tb = 7'b0100000;
     #1 f3_tb = 3'b110;
+    #1 f7_tb = 7'b0;
     #1 f3_tb = 3'b111;
     #1 opcode_tb = 7'b0000011; // IL-Type
     f3_tb = 3'b000;
@@ -107,7 +111,7 @@ module tb_controller();
     #1 f3_tb = 3'b101;
     #1 f3_tb = 3'b110;
     #1 f3_tb = 3'b111;
-    #1 opcode_tb = 7'b0010111; // JALR
+    #1 opcode_tb = 7'b1100111; // JALR
     f3_tb = 3'b000;
     #1 f3_tb = 3'b001;
     #1 f3_tb = 3'b010;
