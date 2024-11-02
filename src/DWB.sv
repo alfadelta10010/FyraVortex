@@ -16,6 +16,6 @@ module DWB(clk, wbCtrl, memW, memCtrl, pcN, aluOut, dataIn, wbOut);
                                   .dataRO(dataOut), .dataWO(dataW), .addrOut(addrOut), .wrType(wrType)
                                  );
   dataMem #(12) dataMemory (.addr(addrOut), .dataW(dataW), .dataR(dataR), .wrType(wrType), .clk(clk), .memW(memW));
-  mux31 #(32) writebackMUX (.a(pcN), .b(aluOut), .c(dataOut), .y(wbOut), .s(wbCtrl)
+  mux31 #(32) writebackMUX (.a(aluOut), .b(dataOut), .c(pcN), .y(wbOut), .s(wbCtrl)
                            );
 endmodule
