@@ -77,7 +77,7 @@ module decoder(instIn, opcode, rd, rs1, rs2, fn3, fn7);
             rd = instIn[11:7];
             fn3 = instIn[14:12];
             if(fn3 == 3'b101)
-              fn7 = {instIn[31:25], 5'b0};
+              fn7 = instIn[31:25];
             else
               fn7 = 7'b0;
           end
@@ -87,7 +87,7 @@ module decoder(instIn, opcode, rd, rs1, rs2, fn3, fn7);
             rs2 = instIn[24:20];
             rd = instIn[11:7];
             fn3 = instIn[14:12];
-            fn7 = instIn[31:24];
+            fn7 = instIn[31:25];
           end
         default:
           begin
